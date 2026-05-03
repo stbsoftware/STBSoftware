@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* Marca / navbar (paleta solicitada) */
+  --color-brand-primary: #2563eb;
+  --color-brand-accent: #60a5fa;
+  --color-ink: #1f2937;
+  --color-line: #d1d5db;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* overflow-x: solo en el wrapper del layout (layout.tsx), no en html/body, para que iOS no recorte el FAB. */
+
+@keyframes hero-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero-typewriter-cursor {
+  animation: hero-cursor-blink 1.1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-typewriter-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* WhatsApp flotante: entrada del botón (ondas vía JS en WhatsAppFloatingButton.tsx) */
+@keyframes wa-whatsapp-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.wa-whatsapp-pulse-blob {
+  background-color: rgba(37, 211, 102, 0.58);
+}
+
+/*
+ * `both`: aplica el estado del primer keyframe antes de empezar (evita el flash a tamaño completo).
+ */
+.wa-whatsapp-pop-in {
+  animation: wa-whatsapp-enter 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform-origin: center;
+}
+
