@@ -10,11 +10,8 @@ const cardClassName =
 const linkCardClassName =
   "group flex h-full flex-col rounded-2xl border border-line bg-white p-5 shadow-[0_1px_3px_rgb(15_23_42/0.06)] transition duration-200 hover:border-brand-primary/45 hover:shadow-[0_4px_20px_rgb(37_99_235/0.1)] sm:p-6";
 
-const DRIVE_URL =
-  "https://drive.google.com/drive/folders/1E9wTrjIQlGuwLJ-RWlCHuikJRarWWJw3";
-const LINKEDIN_URL = "https://www.linkedin.com/in/jeffrykamsteeg/";
-const CV_PATH = "/hoja-de-vida-jeffry-kamsteeg.pdf";
-const CV_FILENAME = "Hoja de vida Jeffry Kamsteeg Rodiño.pdf";
+const CS_URL = "https://www.coffeesocial.com";
+const FEC_URL = "https://fundacion-eternos.netlify.app/";
 
 export const HOME_SECTION_DESCRIPTION =
   "Páginas web, aplicaciones, publicidad con Google y contacto con STB Software.";
@@ -23,7 +20,7 @@ export const HOME_SECTION_DESCRIPTION =
 export const HOME_PAGE_METADATA = {
   title: "STB Software",
   description:
-    `${HOME_SECTION_DESCRIPTION} Portafolio, CV y redes en una sola página.`,
+    `${HOME_SECTION_DESCRIPTION} Trabajos y redes en una sola página.`,
 } satisfies Metadata;
 
 function SectionShell({
@@ -72,6 +69,20 @@ export default function HomeSections() {
           </div>
 
           <div className={cardClassName}>
+            <h2 className="text-lg font-semibold text-ink">Aplicaciones móviles Apple</h2>
+            <p className="mt-2 flex-grow text-sm leading-relaxed text-gray-600">
+              Convertimos su idea en una aplicación móvil funcional para que la encuentre en la App Store.
+            </p>
+          </div>
+
+          <div className={cardClassName}>
+            <h2 className="text-lg font-semibold text-ink">Aplicaciones móviles Android</h2>
+            <p className="mt-2 flex-grow text-sm leading-relaxed text-gray-600">
+              Convertimos su idea en una aplicación móvil funcional para que la encuentre en Google Play Store.
+            </p>
+          </div>
+
+          <div className={cardClassName}>
             <h3 className="text-lg font-semibold text-ink">
               Publicidad con Google
             </h3>
@@ -82,64 +93,49 @@ export default function HomeSections() {
         </div>
       </SectionShell>
 
-      <SectionShell id="portafolio">
+      <SectionShell id="trabajos">
         <h2
-          id="portafolio-heading"
+          id="trabajos-heading"
           className="text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl"
         >
-          Portafolio
+          Trabajos
         </h2>
 
         <div className="mt-8 grid grid-cols-1 gap-5 sm:mt-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           <a
-            href={CV_PATH}
-            download={CV_FILENAME}
-            className={linkCardClassName}
-          >
-            <h3 className="text-lg font-semibold text-ink">Hoja de vida (CV)</h3>
-            <p className="mt-2 flex-grow text-sm leading-relaxed text-gray-600">
-              Documento en PDF listo para descargar o compartir.
-            </p>
-            <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition group-hover:gap-2">
-              Descargar PDF
-              <span aria-hidden>↓</span>
-            </span>
-          </a>
-
-          <a
-            href={DRIVE_URL}
+            href={FEC_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={linkCardClassName}
+            className={cardClassName}
           >
-            <h3 className="text-lg font-semibold text-ink">
-              Carpeta de Google Drive
-            </h3>
+            <h2 className="text-lg font-semibold text-ink">Fundación Eternos Colombia</h2>
             <p className="mt-2 flex-grow text-sm leading-relaxed text-gray-600">
-              Documentos y proyectos organizados por categorías. Se abre en una
-              nueva pestaña.
+              Conectamos corazones generosos con necesidades reales...
             </p>
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition group-hover:gap-2">
-              Abrir Drive
+              Ir a sitio web
               <span aria-hidden>→</span>
             </span>
           </a>
 
           <a
-            href={LINKEDIN_URL}
+            href={CS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className={linkCardClassName}
+            className={cardClassName}
           >
-            <h3 className="text-lg font-semibold text-ink">LinkedIn</h3>
+            <h2 className="text-lg font-semibold text-ink">
+              Mobile App Coffee Social
+            </h2>
             <p className="mt-2 flex-grow text-sm leading-relaxed text-gray-600">
-              Perfil profesional: experiencia, habilidades y trayectoria.
+              Connect Over Coffee
             </p>
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition group-hover:gap-2">
-              Ver perfil
+              Go to website
               <span aria-hidden>→</span>
             </span>
           </a>
+
         </div>
       </SectionShell>
 

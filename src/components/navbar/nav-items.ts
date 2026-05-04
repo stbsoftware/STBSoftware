@@ -16,8 +16,8 @@ export const NAV_ITEMS: NavItem[] = [
     isActive: () => false,
   },
   {
-    label: "Portafolio",
-    href: "/#portafolio",
+    label: "Trabajos",
+    href: "/#trabajos",
     isActive: () => false,
   },
   {

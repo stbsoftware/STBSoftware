@@ -29,7 +29,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/#portafolio"
+            href="/#trabajos"
             className="inline-flex min-h-11 items-center justify-center rounded-xl border border-white/35 bg-white/5 px-6 py-3 text-center text-sm font-medium text-white backdrop-blur-sm transition hover:bg-white/15 sm:min-h-12 sm:text-base"
           >
             Ver trabajos
