@@ -17,11 +17,11 @@ const CV_PATH = "/hoja-de-vida-jeffry-kamsteeg.pdf";
 const CV_FILENAME = "Hoja de vida Jeffry Kamsteeg Rodiño.pdf";
 
 export const HOME_SECTION_DESCRIPTION =
-  "Páginas web, aplicaciones, publicidad con Google y contacto con JKR Software.";
+  "Páginas web, aplicaciones, publicidad con Google y contacto con STB Software.";
 
 /** Metadatos de la página de inicio (contenido unificado aquí). */
 export const HOME_PAGE_METADATA = {
-  title: "JKR Software",
+  title: "STB Software",
   description:
     `${HOME_SECTION_DESCRIPTION} Portafolio, CV y redes en una sola página.`,
 } satisfies Metadata;

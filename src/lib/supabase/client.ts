@@ -1,4 +1,4 @@
-import { createBrowserClient } from "@supabase/ssr";
+import { createBrowserClient } from "@supabase/auth-helpers-nextjs";
 
 /**
  * Credenciales reales siempre desde env. Placeholders solo para SSR/build sin `.env`:

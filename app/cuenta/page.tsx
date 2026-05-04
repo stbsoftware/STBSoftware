@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Mi cuenta",
-  description: "Datos de tu sesión en JKR Software.",
+  description: "Datos de tu sesión en STB Software.",
 };
 
 export default async function CuentaPage() {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/img/jkr_software.png";
+import logo from "@/img/STB_logo.png";
 import { logoImageClassName, logoLinkClassName } from "./nav-styles";
 
 type NavbarBrandProps = {
@@ -12,7 +12,7 @@ export function NavbarBrand({ onNavigate }: NavbarBrandProps) {
     <Link href="/" className={logoLinkClassName} onClick={onNavigate}>
       <Image
         src={logo}
-        alt="JKR Software"
+        alt="STB Software"
         width={640}
         height={200}
         priority

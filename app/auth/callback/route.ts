@@ -1,4 +1,4 @@
-import { createServerClient } from "@supabase/ssr";
+import { createServerClient } from "@supabase/auth-helpers-nextjs";
 import { type NextRequest, NextResponse } from "next/server";
 
 /** Rutas permitidas tras `exchangeCodeForSession` (evita redirects abiertos). */
@@ -19,6 +19,35 @@ function safeNextPath(raw: string | null, fallback = "/cuenta"): string {
   if (t.includes("://")) return fallback;
   return ALLOWED_AFTER_AUTH.has(t) ? t : fallback;
 }
+/*
+command:
+npm run dev
+
+result:
+> webpersonal@0.1.0 dev
+> node scripts/dev-with-browser.mjs
+
+node:internal/modules/package_json_reader:301
+  throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
+        ^
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'open' imported from /Users/hermestrujillopgmail.com/LocalDocuments/STBSoftware/scripts/dev-with-browser.mjs
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:301:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:859:18)
+    at defaultResolve (node:internal/modules/esm/resolve:991:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:713:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:730:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:52)
+    at #resolve (node:internal/modules/esm/loader:695:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:615:35)
+    at ModuleJob.syncLink (node:internal/modules/esm/module_job:160:33) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v25.5.0
+
+*/ 
 
 /**
  * PKCE/email de confirmación: las cookies deben ir en el NextResponse.redirect,
