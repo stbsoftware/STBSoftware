@@ -140,8 +140,7 @@ export default function HomeSections() {
       </SectionShell>
 
       <SectionShell id="contacto">
-        <h2
-          id="contacto-heading"
+        <h2 id="contacto-heading"
           className="text-3xl font-bold tracking-tight text-ink sm:text-4xl md:text-5xl"
         >
           Contacto
