@@ -25,4 +25,9 @@ export const NAV_ITEMS: NavItem[] = [
     href: "/#contacto",
     isActive: () => false,
   },
+  {
+    label: "Nuestro Equipo",
+    href: "/equipo",
+    isActive: () => false,
+  },
 ];

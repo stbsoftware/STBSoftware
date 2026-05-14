@@ -1,0 +1,58 @@
+[
+    {
+    "name": "SALOMÉ TRUJILLO",
+    "photo": "https://media.licdn.com/dms/image/v2/D4E03AQEWd9Nx7OnmnQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729068638811?e=1780531200&v=beta&t=_PJA0CDqn4Ie_SqTBeiCGd9ZLIRH_7B4etlD77iTakI",
+    "role": "Administradora de medios digitales",
+    "phone": "+57 302 5733448",
+    "email": "salome.trujillo@stbsoftware.co",
+    "nickname": "@Salome",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/salometrujillobernal/",
+        "twitter": "https://twitter.com/salome_trujillo",
+        "github": "https://github.com/salome-trujillo"
+    },
+    "address": "Itagüí, Colombia"
+},
+{
+    "name": "JEFFRY KANSTEEG",
+    "photo": "https://media.licdn.com/dms/image/v2/D4E03AQHTppFw8m41AQ/profile-displayphoto-crop_800_800/B4EZmsc7WWHgAI-/0/1759534892182?e=1780531200&v=beta&t=_4vdHiYuJrodZU_Z3VIgvnogfPRjkl79AMMLQ3VrmC4",
+    "role": "Ingeniero de Software",
+    "phone": "+57 300 1659072",
+    "email": "jeffrey.kansteeg@stbsoftware.co",
+    "nickname": "@jeffrykansteeg",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/jeffrykansteeg/",
+        "twitter": "https://twitter.com/jeffrykansteeg",
+        "github": "https://github.com/jeffrykansteeg"
+    },
+    "address": "Medellín, Colombia"
+},
+{
+    "name": "ERIK FERNANDO ALARCÓN",
+    "photo": "",
+    "role": "Ingeniero de Software",
+    "phone": "+57 300 1234567",
+    "email": "fernando.alarcon@example.com",
+    "nickname": "@FernandoAlarcon",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/fernando-alarcon-984687119/",
+        "twitter": "https://twitter.com/fernando_alarcon",
+        "github": "https://github.com/fernando-alarcon"
+    },
+    "address": "Medellín, Colombia"
+},
+{
+    "name": "HERMES TRUJILLO",
+    "photo": "https://media.licdn.com/dms/image/v2/D4E03AQGeCZRQgCkE2A/profile-displayphoto-crop_800_800/B4EZ17LndcJcAI-/0/1775888140295?e=1780531200&v=beta&t=4tcgAORHbaWPwuS4yA3rgJPnPWBABx7VXbDRvDwQcq4",
+    "role": "Ingeniero de Software",
+    "phone": "+57 317 4317573",
+    "email": "hermes.trujillo@example.com",
+    "nickname": "@HermesTrujilloP",
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/hermestrujillop/",
+        "twitter": "https://twitter.com/hermes_trujillo",
+        "github": "https://github.com/hermes-trujillo"
+    },
+    "address": "Medellín, Colombia"
+}
+]

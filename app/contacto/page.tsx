@@ -1,5 +1,8 @@
+
+import React from "react";
 import type { Metadata } from "next";
 import { EMAIL, PHONE_DISPLAY, PHONE_E164 } from "@/config/contact";
+import { EquipoSlider } from "@/components/EquipoSlider";
 
 const MAILTO_HREF = `mailto:${EMAIL}`;
 
@@ -12,6 +15,14 @@ export const metadata: Metadata = {
 };
 
 export default function ContactoPage() {
+  // Cargar datos del equipo dinámicamente en el cliente
+  const [profiles, setProfiles] = React.useState([]);
+  React.useEffect(() => {
+    fetch("/profiles.json")
+      .then((res) => res.json())
+      .then((data) => setProfiles(data));
+  }, []);
+
   return (
     <main className="min-h-screen bg-gray-50/90 px-4 py-12 sm:px-6 sm:py-16 md:py-20">
       <div className="mx-auto max-w-6xl">
@@ -27,7 +38,7 @@ export default function ContactoPage() {
               <span className="font-medium text-ink">{PHONE_DISPLAY}</span>.
             </p>
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition group-hover:gap-2">
-              Llamar ahora
+              Llamar ahora:
               <span aria-hidden>→</span>
             </span>
           </a>
@@ -39,11 +50,17 @@ export default function ContactoPage() {
               <span className="font-medium text-ink break-all">{EMAIL}</span>.
             </p>
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-primary transition group-hover:gap-2">
-              Enviar correo
+              Enviar correo:
               <span aria-hidden>→</span>
             </span>
           </a>
         </div>
+        {/* Sección Equipo */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold text-brand-primary mb-6">Equipo</h2>
+          <p className="mb-8 text-gray-700 max-w-2xl">Conoce a nuestro equipo de trabajo. Cada miembro aporta experiencia y dedicación para ofrecerte el mejor servicio.</p>
+          {profiles.length > 0 && <EquipoSlider profiles={profiles} />}
+        </section>
       </div>
     </main>
   );
